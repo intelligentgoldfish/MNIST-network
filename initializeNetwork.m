@@ -12,8 +12,8 @@ function [weights,biases] = initializeNetwork(dim)
 
     %initializes weights and biases using normal distribution
     for n = 1:numLayers-1
-        weights{n} = randn(dim(n+1),1); %initializes weights along neuron rows at one per neuron
-        biases{n} = randn(dim(n+1),dim(n)); %initializes biases along neural connections
+        weights{n} = randn(dim(n+1),dim(n)); %initializes weights along neuron rows at one per neuron
+        biases{n} = randn(dim(n+1),1); %initializes biases along neural connections
     end
 
 end
