@@ -20,7 +20,7 @@ z{1} = input; %feed information into leading neurons
 for n = 2:numLayers %begin at 2 as first layer only feeds information forward
     x = w{n-1} * a{n-1} + b{n-1}; % w{n-1}(1,1:dim(n-1))
     z{n} = x; %store pre-sigmoid outputs
-    a{n} = sigmoid(x); %store neuron outputs and feed to next layer
+    a{n} = swish(x); %store neuron outputs and feed to next layer
 end
 
 end
