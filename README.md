@@ -28,7 +28,11 @@ Finally, the network will return its average accuracy.  This may be slightly low
 The following scripts contain core functions and hyperparameters of the network:
 
 backprop3.m (contains cost function and derivative of activation function)
+
 feedForward3.m (contains activation function)
+
 assembleNetwork.m (contains dimensions, learning rate, epochs, mini-batch size)
+
 initNetwork3.m (creates new network with random weights and biases)
+
 sigmoid.m/sigmoidPrime.m (sigmoid function/derivative)
