@@ -31,7 +31,7 @@ for epoch = 1:epochs
         thisBatch = train(batchRange,:);
         
         %backprop and tweak
-        [eW,eB,cost] = updateBatch3(w,b,dim,thisBatch);
+        [eW,eB,~] = updateBatch3(w,b,dim,thisBatch);
         [w,b] = applyError3(w,b,dim,eW,eB,learningRate);
     end
     
@@ -48,11 +48,14 @@ for epoch = 1:epochs
     
     timeElapsed = toc;
 
+    meanTime = timeElapsed/epoch;
+    estimatedTime = meanTime*(epochs-epoch);
+
     %display progress
     disp(['Epoch ',num2str(epoch),' of ',num2str(epochs),' complete.']);
     disp(['Time elapsed: ',num2str(timeElapsed),' seconds.']);
     disp([num2str(stat),'% accuracy.']);
-    disp(['Average cost: ',num2str(cost),newline]);
+    disp(['Estimated time remaining: ',num2str(estimatedTime),newline]);
 end
 
 avgAccuracy = 100 * avgAccuracy / epochs;

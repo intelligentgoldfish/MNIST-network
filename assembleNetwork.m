@@ -7,8 +7,8 @@ clear; clc;
 
 disp('~~~MNIST-Trainable Feedforward Neural Network~~~');
 disp('Author: Thomas DeWitt');
-disp('Version 3.9.2');
-disp(['Updates:',newline,'-Now using the swish activation function',newline,newline,...
+disp('Version 3.9.3');
+disp(['Updates:',newline,'- Now includes basic estimated time to completion',newline,newline,...
     'Press any key to create and train a new network.',newline]);
 
 pause;

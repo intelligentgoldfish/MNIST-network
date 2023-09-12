@@ -24,7 +24,7 @@ delta = gradient; %cross-entropy cost
 for n = (numLayers-1):-1:1 %for each layer backpropagating
     dW{n} = delta * a{n}'; %calc and store weight error
     dB{n} = delta; %store bias error
-    delta = w{n}' * delta .* swishPrime(z{n}); %calc error in next layer
+    delta = w{n}' * delta .* sigmoidPrime(z{n}); %calc error in next layer
 end
 
 end
